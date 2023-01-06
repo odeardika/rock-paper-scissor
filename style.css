@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'GEO';
+    src: url('/fonts/geo-regular.ttf') format('truetype');
+}
+  
+h1{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'GEO', sans-serif;
+    font-weight: 500;
+}
+button{
+    width: 355px;
+    height: 299px;
+    border-radius: 25px;
+    margin-left: 119px;
+
+}
+#rock{
+    background-color: #ff0000;
+    border: solid #ff0000;
+    margin-left: 0px; 
+}
+#rock:hover{
+    background-color: #f86b6b;
+    border: solid #f86b6b;
+}
+#paper{
+    background: #14ff00;
+    border: solid #14ff00;
+}
+#paper:hover{
+    background: #88fa7d;
+    border: solid #88fa7d;
+}
+#scissor{
+    background: #0047ff;
+    border: solid #0047ff;
+}
+#scissor:hover{
+    background: #769dff;
+    border: solid #769dff;
+}
+img[src="fa_hand-rock-o.png"]{
+    width: 202px;
+    height: 196px;
+}
+img[src="fa_hand-paper-o.png"]{
+    width: 184px;
+    height: 194px;
+}
+img[src="fa_hand-scissors-o.png"]{
+    width: 224px;
+    height: 192px;
+}
