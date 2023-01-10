@@ -1,8 +1,8 @@
 const rock_button = document.getElementById("rock");
 const paper_button = document.getElementById("paper");
 const scissor_button = document.getElementById("scissor");
-const output = document.getElementById("output");
-output.style.display = "none";
+const h1 = document.getElementById("result");
+const h2 = document.getElementById("detail_result");
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -27,37 +27,50 @@ function cekResult(playerHand){
             if(playerHand != "paper"){
                 //player using scissor
                 if(com == "rock"){
-                    output.textContent = `You lose the computer is using ${com} and you are using ${playerHand}`;
+                    h1.style.color = "red";
+                    h1.textContent = "YOU LOSE!";
+                    h2.textContent = `The computer is using ${com} and you are using ${playerHand}`;
                 }
                 else{
-                    output.textContent = `You win the computer is using ${com} and you are using ${playerHand}`;
+                    h1.style.color = "green";
+                    h1.textContent = "YOU WIN!";
+                    h2.textContent = `The computer is using ${com} and you are using ${playerHand}`;
                 }
             }
             else{
                 //player using paper
                 if(com == "scissor"){
-                    output.textContent = `You lose the computer is using ${com} and you are using ${playerHand}`;
+                    h1.style.color = "red";
+                    h1.textContent = "YOU LOSE!";
+                    h2.textContent = `The computer is using ${com} and you are using ${playerHand}`;
                 }
                 else{
-                    output.textContent = `You win the computer is using ${com} and you are using ${playerHand}`;
+                    h1.style.color = "green";
+                    h1.textContent = "YOU WIN!";
+                    h2.textContent = `The computer is using ${com} and you are using ${playerHand}`;
                 }    
             }
         }
         else{
             //player using rock
             if(com == "paper"){
-                output.textContent = `You lose the computer is using ${com} and you are using ${playerHand}`;
+                h1.style.color = "red";
+                h1.textContent = "YOU LOSE!";
+                h2.textContent = `The computer is using ${com} and you are using ${playerHand}`;
             }
             else{
-                output.textContent = `You win the computer is using ${com} and you are using ${playerHand}`;
+                h1.style.color = "green";
+                h1.textContent = "YOU WIN!";
+                h2.textContent = `The computer is using ${com} and you are using ${playerHand}`;
             }
         }
     }else{
-        output.textContent = `It's a draw you and the computer are using ${com}`;
+        h1.textContent = "";
+        h2.textContent = `It's a draw you and the computer are using ${com}`;
     }    
 }
 
 
-rock_button.addEventListener("click", cekResult("rock"));
-paper_button.addEventListener("click", cekResult("paper"));
-scissor_button.addEventListener("click", cekResult("scissor"));
+rock_button.addEventListener("click", ()=>{ cekResult("rock")});
+paper_button.addEventListener("click", ()=>{ cekResult("paper")});
+scissor_button.addEventListener("click",  ()=>{ cekResult("scissor")});
